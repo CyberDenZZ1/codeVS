@@ -1,0 +1,73 @@
+%underborder {
+	border-bottom: 5px dashed rgba(201, 12, 154, 0.596);
+}
+//%underborder - template
+$bobo: 100px;
+@mixin fontSZ($f) {
+	font-size: $f;
+}
+@mixin baby($c, $bobo) {
+	font-size: $c;
+	color: $bobo;
+}
+@mixin arsen($bo, $suka, $sus) {
+	font-size: $bo;
+	width: $suka;
+	color: $sus;
+}
+$bobi: green;
+$sukki: blueviolet;
+%overline {
+	color: black;
+	text-decoration: underline;
+}
+@mixin bobikk($ss, $aa, $qq) {
+	font-size: $ss;
+	margin-left: $aa;
+	border-color: $qq;
+}
+%bobbbi {
+	border-bottom: hidden;
+	color: black;
+}
+%ssukka {
+	border-bottom: 1px solid red;
+	background: pink;
+}
+$sukka: blue;
+//@mixin - mixin, with variable
+header {
+	p {
+		font-size: 100px;
+	}
+	.block {
+		&.block_1 {
+			width: $bobo;
+			height: $bobo;
+			background: blueviolet;
+			a {
+				@extend %bobbbi;
+				&.baby {
+					font-size: $bobo;
+					text-decoration: underline;
+					@include fontSZ(90px); //@include - turn on mixin
+					&:hover {
+						text-decoration: overline;
+					}
+					@extend %underborder; //@extend - turn on template
+					@include arsen(100px, 200px, green);
+				}
+				&.bobik {
+					font-size: $bobo;
+					text-decoration: overline;
+					@extend %underborder;
+					@include baby(400px, red);
+					color: $sukka;
+					@include bobikk(300px, 25%, violet);
+				}
+				@extend %ssukka;
+				color: $sukka;
+			}
+		}
+	}
+}

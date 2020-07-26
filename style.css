@@ -1,0 +1,44 @@
+header .block.block_1 a.baby, header .block.block_1 a.bobik {
+  border-bottom: 5px dashed rgba(201, 12, 154, 0.596);
+}
+
+header p {
+  font-size: 100px;
+}
+
+header .block.block_1 {
+  width: 100px;
+  height: 100px;
+  background: blueviolet;
+}
+
+header .block.block_1 a.baby {
+  font-size: 100px;
+  text-decoration: underline;
+  font-size: 90px;
+}
+
+header .block.block_1 a.baby:hover {
+  text-decoration: overline;
+}
+
+header .block.block_1 a.bobik {
+  font-size: 100px;
+  text-decoration: overline;
+}
+
+body div .box1 {
+  width: 80px;
+  height: 200px;
+  background: brown;
+  border: 1px solid red;
+}
+
+body div .box1.box_1 {
+  width: 200px;
+  height: 100px;
+}
+
+body div .box1.box_2 {
+  background: chartreuse;
+}
